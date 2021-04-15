@@ -57,8 +57,8 @@ jobs:
          run: |            
              cd $GITHUB_WORKSPACE/SGSI-build-tool
              pwd
-             ls
-             zip -r $REPACK_NAME ./SGSI/*
+             mkdir final
+             zip -r final/$REPACK_NAME ./SGSI/*
              ls "$REPACK_NAME"
        - name: Upload SGSI to WeTransfer...
          if: env.upload_WeTransfer == 'true' 
