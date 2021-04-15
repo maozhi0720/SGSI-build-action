@@ -7,7 +7,7 @@ env:
   OS_TYPE: Flyme
   BUILD_TYPE: 'ab'
   REPACK_NAME: flyme_action_9.21.4.6.zip
-  VERSION: 11
+  VERSION: 12
   upload_WeTransfer: 'true'
   upload_action-gh-release: 'false'
   SETUP: 'true'
@@ -68,7 +68,7 @@ jobs:
          with:
            files: ${{ github.workspace }}/SGSI-build-tool/${{ env.REPACK_NAME }}
            name: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-unpack
-           tag_name: 11
+           tag_name: 12
            #body: Use actions auto bulid
          env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
