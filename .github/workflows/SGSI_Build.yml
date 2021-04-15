@@ -2,9 +2,9 @@
 
 name: SGSI_Build
 
-on:
-  watch:
-    types: [started]
+on: [push]
+  #watch:
+  #  types: [started]
     
 env:              
   ROM_URL: https://download.meizu.com/Firmware/Flyme/meizu17/9.21.4.6/cn_daily/20210406225844/934652e2/update.zip
