@@ -1,18 +1,13 @@
 # This is a basic workflow to help you get started with Actions
-
 name: SGSI_Build
-
-on:
-  release:
-    types: [published]
-    
+on: [push]
 env:              
   ROM_URL: https://download.meizu.com/Firmware/Flyme/meizu17/9.21.4.6/cn_daily/20210406225844/934652e2/update.zip
   ZIP_NAME: flyme.zip
   OS_TYPE: Flyme
   BUILD_TYPE: 'ab'
   REPACK_NAME: flyme_action_9.21.4.6.zip
-  VERSION: 11
+  VERSION: 12
   upload_WeTransfer: 'true'
   upload_action-gh-release: 'false'
   SETUP: 'true'
