@@ -7,12 +7,12 @@ on:
     types: [started]
     
 env:              
-  ROM_URL: https://dl.google.com/developers/android/sc/images/ota/redfin-ota-spp2.210219.008-3d61e529.zip
-  ZIP_NAME: test.zip
-  OS_TYPE: Pixel
+  ROM_URL: https://download.meizu.com/Firmware/Flyme/meizu17/9.21.4.6/cn_daily/20210406225844/934652e2/update.zip
+  ZIP_NAME: flyme.zip
+  OS_TYPE: Flyme
   BUILD_TYPE: 'ab'
-  REPACK_NAME: test_action.zip
-  VERSION: 12
+  REPACK_NAME: flyme_action_9.21.4.6.zip
+  VERSION: 11
   upload_WeTransfer: 'true'
   upload_action-gh-release: 'false'
   SETUP: 'true'
@@ -60,7 +60,7 @@ jobs:
              zip -r $REPACK_NAME ./SGSI/*
              ls "$REPACK_NAME"
        - name: Upload SGSI to WeTransfer...
-         if: env.upload_WeTransfer == 'true' 
+         if: env.upload_WeTransfer == 'false' 
          run: |
            cd $GITHUB_WORKSPACE/SGSI-build-tool
            pwd
