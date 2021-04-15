@@ -3,11 +3,11 @@ name: SGSI_Build
 on: [push]
 env:              
   ROM_URL: https://download.meizu.com/Firmware/Flyme/meizu17/9.21.4.6/cn_daily/20210406225844/934652e2/update.zip
-  ZIP_NAME: flyme.zip
+  ZIP_NAME: flyme_action_9.21.4.6.zip
   OS_TYPE: Flyme
   BUILD_TYPE: 'ab'
   REPACK_NAME: flyme_action_9.21.4.6.zip
-  VERSION: 12
+  VERSION: 11
   upload_WeTransfer: 'true'
   upload_action-gh-release: 'false'
   SETUP: 'true'
@@ -68,7 +68,7 @@ jobs:
          with:
            files: ${{ github.workspace }}/SGSI-build-tool/${{ env.REPACK_NAME }}
            name: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-unpack
-           tag_name: 12
+           tag_name: 11
            #body: Use actions auto bulid
          env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
